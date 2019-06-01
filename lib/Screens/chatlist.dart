@@ -7,7 +7,6 @@ import 'package:chatapp/Data/chatData.dart';
 import 'package:chatapp/Screens/ChatScreen.dart';
 
 class ChatList extends StatefulWidget {
-
   ChatList();
   @override
   _ChatListState createState() => _ChatListState();
@@ -15,85 +14,12 @@ class ChatList extends StatefulWidget {
 
 class _ChatListState extends State<ChatList> {
 
-
   _ChatListState();
 
-  var product_list = [
-    {
-      "name": "KFC",
-      "picture": "https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png",
-      "des": "Fastfood, burger, pizza",
-      "two": "500 for two",
-      "rate": "4.0"
-    },
-    {
-      "name": "KFC",
-      "picture": "https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png",
-      "des": "Fastfood",
-      "two": "500 for two",
-      "rate": "4.0"
-    },
-    {
-      "name": "KFC",
-      "picture": "https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png",
-      "des": "Fastfood",
-      "two": "500 for two",
-      "rate": "4.0"
-    },
-    {
-      "name": "KFC",
-      "picture": "https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png",
-      "des": "Fastfood",
-      "two": "500 for two",
-      "rate": "4.0"
-    },
-    {
-      "name": "KFC",
-      "picture": "https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png",
-      "des": "Fastfood, burger, pizza",
-      "two": "500 for two",
-      "rate": "4.0"
-    }, {
-      "name": "KFC",
-      "picture": "https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png",
-      "des": "Fastfood",
-      "two": "500 for two",
-      "rate": "4.0"
-    },
-    {
-      "name": "KFC",
-      "picture": "https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png",
-      "des": "Fastfood",
-      "two": "500 for two",
-      "rate": "4.0"
-    },
-    {
-      "name": "KFC",
-      "picture": "https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png",
-      "des": "Fastfood",
-      "two": "500 for two",
-      "rate": "4.0"
-    },
-    {
-      "name": "KFC",
-      "picture": "https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png",
-      "des": "Fastfood",
-      "two": "500 for two",
-      "rate": "4.0"
-    },{
-      "name": "KFC",
-      "picture": "https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png",
-      "des": "Fastfood",
-      "two": "500 for two",
-      "rate": "4.0"
-    },
-  ];
  ChatData chatData;
  static const URL_GETCHATS="http://vithack.herokuapp.com/chats/user/to?email=angadsharma1016@gmail.com";
   Future fetchPosts(http.Client client) async {
-//    body['userLat'] = '$lat';
-//    body['userLng'] = '$lng';
-//    print(body);
+
     print("yjhtgfdsyutrgds");
     var response = await http.get(
       URL_GETCHATS, headers: {"Content-Type": "application/json"},);
@@ -158,8 +84,6 @@ chatData=ChatData.fromJson(jsonDecode(response.body));
                        height: 50,
                        child: Container(child: Row(
                            children: <Widget>[
-
-
                              Flexible(
                                child: Column(
                                  children: <Widget>[
@@ -263,7 +187,6 @@ chatData=ChatData.fromJson(jsonDecode(response.body));
              },
              childCount: chatData.docs.length,
            ));
-
      }});
   }
 }
