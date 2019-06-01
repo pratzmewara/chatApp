@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:chatapp/Screens/homepage.dart';
 import 'package:chatapp/Screens/startpage.dart';
 import 'package:chatapp/Screens/loginScreen.dart';
+import 'package:flutter/rendering.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  debugPaintSizeEnabled = false;  
+  runApp(new MyApp());
+  }
 
 class MyApp extends StatelessWidget {
   @override
